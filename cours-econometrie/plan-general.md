@@ -13,8 +13,15 @@ Ce bloc pose l'imagerie mentale, géométrique et probabiliste sans la lourdeur 
 * Qu'est-ce qu'une distribution ? Comprendre la Loi Normale comme la représentation graphique des variations quotidiennes d'un marché stable. Introduction aux résidus et aux hypothèses statistiques de base (erreur centrée, variance constante).
 * Fil rouge Trading : Différencier une variation de prix qui relève du hasard (bruit de marché) d'un mouvement anormal qui indique le début d'une vraie tendance (signal). Comprendre pourquoi une moyenne mobile est en retard et pourquoi l'analyse des résidus est plus fine.
 
-### Mini-Projet 1 : Le Cahier des Charges de la Régression Bivariée
-* Fil rouge Trading : Concevoir un script conceptuel d'arbitrage de deux devises. Vous devez définir graphiquement les critères géométriques d'un écart de prix anormal à l'aide des résidus scalaires, modéliser leur distribution sous l'hypothèse de bruit blanc, et lister les limites d'un indicateur technique classique (type RSI) face à cette droite de régression.
+### 4. Bandes de Confiance & Précision Locale des Prédictions
+
+- Comprendre l'incertitude spatiale d'un modèle linéaire. Dérivation scalaire de la variance de la prédiction : l'erreur n'est pas uniforme et s'évase en parabole vers les extrêmes sous l'effet de l'écart au centre de gravité ($x_0 - \bar{x}$).
+- Fil rouge Trading : Tunnel de décision dynamique. Remplacer les barrières fixes du Z-Score par des enveloppes hyperboliques de sécurité qui s'écartent automatiquement lors des poussées de volatilité macroéconomique pour immuniser le robot contre les déclenchements d'ordres prématurés sur des signaux fantômes.
+
+### Mini-Projet 1 : Le Moteur de Backtest & Tableau de Bord d'Arbitrage Statistique de Précision
+
+- Développement incrémental par Sprints d'un framework complet de backtesting par fenêtre glissante (Rolling Window) sur un couple de devises réelles (EUR/USD vs GBP/USD). Implémentation du moteur OLS à passe unique, de la cascade des trois interrupteurs de sécurité (R², t-test, ratio de flou) et du Z-Score ajusté dynamiquement par l'incertitude locale de la droite ($Z_{\text{dyn}}$).
+- Fil rouge Trading : Tableau de bord de simulation haute performance à 5 panneaux animés via `FuncAnimation` et rendu sélectif (`blit=True`). Visualisation synchronisée en direct des prix bruts (double échelle `twinx`), du nuage de points avec sa droite oscillante, de l'évasement hyperbolique des bandes de confiance du spread, de l'état des circuit breakers et de la divergence des courbes de capitaux (Modèle Naïf vs Bouclier Statistique).
 
 ## Bloc 2 : Le Paradigme Linéaire Global (Transition Matricielle & Modèle Multiple)
 Ce bloc transpose le modèle simple dans l'espace de l'algèbre linéaire et généralise la régression à N variables explicatives simultanées.
