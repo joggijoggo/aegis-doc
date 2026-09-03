@@ -107,3 +107,47 @@ $$\text{Tr}(X) = \text{Tr}\left(\begin{bmatrix} \mathbf{1} & 3 \\ 2 & \mathbf{1}
     $$\text{Tr}(X) = \text{Tr}(X^t)$$
 2.  **Linéarité :** La trace d'une somme de matrices est égale à la somme de leurs traces individuelles.
     $$\text{Tr}(A + B) = \text{Tr}(A) + \text{Tr}(B)$$
+
+# COMPLÉMENT DU CHAPITRE 2 : LES PROPRIÉTÉS OPÉRATOIRES FONDAMENTALES
+
+Soient $A$, $B$ et $C$ trois matrices de dimensions compatibles, $I$ la matrice identité, et $\lambda, \mu$ deux scalaires réels (des nombres).
+
+## 1. Propriétés de l'Addition (La structure de groupe)
+L'addition des matrices se comporte à l'identique de l'addition des nombres réels :
+*   **Commutativité :** L'ordre des facteurs ne change pas le résultat.
+    $$A + B = B + A$$
+*   **Associativité :** Le regroupement des termes n'altère pas la somme finale.
+    $$(A + B) + C = A + (B + C)$$
+*   **Élément neutre :** Il existe une matrice nulle (notée $0$, remplie de zéros) de dimension identique qui ne modifie pas la matrice d'origine.
+    $$A + 0 = A$$
+
+## 2. Propriétés de la Multiplication par un Scalaire (La linéarité)
+Le produit d'un nombre par un tableau distribue de façon homogène les coefficients :
+*   **Distributivité par rapport aux matrices :** Appliquer un coefficient multiplicateur à une somme de deux tableaux revient à l'appliquer à chaque tableau individuellement.
+    $$\lambda(A + B) = \lambda A + \lambda B$$
+*   **Distributivité par rapport aux scalaires :**
+    $$(\lambda + \mu)A = \lambda A + \mu A$$
+*   **Associativité des scalaires :**
+    $$\lambda(\mu A) = (\lambda\mu)A$$
+
+## 3. Propriétés du Produit Matriciel (L'algèbre non-commutative)
+Bien que le produit matriciel soit strictement **non-commutatif** ($AB \neq BA$), il conserve les propriétés opératoires fondamentales suivantes :
+*   **Associativité :** Lors d'une suite de multiplications, l'ordre de priorité du calcul n'influe pas sur le résultat final.
+    $$(AB)C = A(BC)$$
+*   **Distributivité à gauche et à droite :** Le produit se distribue linéairement sur l'addition, en respectant impérativement la position des facteurs (gauche ou droite).
+    $$A(B + C) = AB + AC$$
+    $$(B + C)A = BA + CA$$
+
+## 4. Propriétés Avancées de la Transposition ($^t$)
+La transposition respecte les règles de linéarité et de retournement géométrique :
+*   **Involutivité (Le double miroir) :** Transposer deux fois consécutives un tableau le ramène à son état morphologique initial.
+    $$(A^t)^t = A$$
+*   **Distributivité sur l'addition :** La transposée d'une somme de matrices est égale à la somme des matrices transposées.
+    $$(A + B)^t = A^t + B^t$$
+
+## 5. Propriétés Avancées de la Trace ($\text{Tr}$)
+L'opérateur Trace possède une propriété de permutation circulaire. Elle s'avère indispensable pour simplifier les formes quadratiques :
+*   **Invariance circulaire (Cas de 2 matrices) :** Bien que le produit $AB$ soit différent de $BA$, la somme de leurs éléments diagonaux respectifs est rigoureusement identique.
+    $$\text{Tr}(AB) = \text{Tr}(BA)$$
+*   **Invariance circulaire générale (Cas de 3 matrices) :** Le dernier facteur d'un produit peut être basculé en première position sans altérer la trace globale du tableau.
+    $$\text{Tr}(ABC) = \text{Tr}(CAB) = \text{Tr}(BCA)$$
